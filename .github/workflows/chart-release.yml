@@ -1,0 +1,20 @@
+name: release-chart
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release-chart:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Publish Helm chart
+        uses: stefanprodan/helm-gh-pages@master
+        with:
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+          charts_dir: '.'
+          charts_url: https://ryantiger658.github.io/unbound-helm-chart
+          owner: ryantiger658
+          repository: charts
+          branch: chart-repo
