@@ -1,37 +1,30 @@
-## Welcome to GitHub Pages
+## Unbound Helm Chart
 
-You can use the [editor on GitHub](https://github.com/ryantiger658/unbound-helm-chart/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+![release-chart](https://github.com/ryantiger658/unbound-helm-chart/actions/workflows/chart-release.yml/badge.svg)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### What is Unbound
+Why are you asking me? Google it!
 
-### Markdown
+[According to Google:](https://www.nlnetlabs.nl/projects/unbound/about/)
+> Unbound is a validating, recursive, caching DNS resolver. It is designed to be fast and lean and incorporates modern features based on open standards. Late 2019, Unbound has been rigorously audited, which means that the code base is more resilient than ever.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### How do I use it 
+I like many nerds run a PiHole on my home network to block ads across the network. PiHole works by denying queries to known add urls, and forwarding valid queries to an upstream resolver such as 1.1.1.1 or Google's 8.8.8.8. 
 
-```markdown
-Syntax highlighted code block
+By running Unbound I am able to set my Unbound deployment as the upstream for my PiHole. This allows me to resolve all queries internally based off of authoratitive sources. Meaning even more security... and even less ISP tracking. 
 
-# Header 1
-## Header 2
-### Header 3
+!(seemscrazy)[https://media.giphy.com/media/9hEcsoYAJb3kA/giphy.gif]
 
-- Bulleted
-- List
+(You're not wrong)
 
-1. Numbered
-2. List
+### How to Use This Repo and the Chart Repo
 
-**Bold** and _Italic_ and `Code` text
+Chart Repo URL:  https://ryantiger658.github.io/unbound-helm-chart/
 
-[Link](url) and ![Image](src)
+Chart Name: unbound
+
+### To Install
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ryantiger658/unbound-helm-chart/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+helm repo add unbound https://ryantiger658.github.io/unbound-helm-chart/
+helm install unbound/unbound deploymentname
+```
