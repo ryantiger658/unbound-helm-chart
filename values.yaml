@@ -43,8 +43,19 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: ClusterIP
-  port: 5053
+  enabled: true
+  type: LoadBalancer
+  port: 53
+  # Additional annotations (e.g. for cloud provider specific config)
+  annotations:
+    metallb.universe.tf/allow-shared-ip: unbound
+  # Additional service labels (e.g. for filtering Service by custom labels)
+  labels: {}
+  # Additional entries here will be added to the service spec. Cannot contains
+  # type, selector or ports entries.
+  spec:
+    externalTrafficPolicy: Local
+    loadBalancerIP: "192.168.10.254"
 
 ingress:
   enabled: false
