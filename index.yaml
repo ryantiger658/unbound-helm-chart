@@ -3,9 +3,9 @@ entries:
   unbound:
   - apiVersion: v2
     appVersion: 1.13.1
-    created: "2021-04-09T18:12:53.361865081Z"
+    created: "2021-04-09T19:00:29.77988476Z"
     description: A Helm chart for deploying Unbound
-    digest: 74aca68dccaf7b6cea41cb651dcbf86f408a98bebb5ad2a37ba1b9106fdcd647
+    digest: 71ab66340e3cd6ab73e5a80933bac4dfbd53790e1d625bc5cb98d4f797b7fde2
     name: unbound
     type: application
     urls:
@@ -13,7 +13,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-04-09T18:12:53.361271681Z"
+    created: "2021-04-09T19:00:29.778943624Z"
     description: A Helm chart for deploying Unbound
     digest: 3c0560baf797c02c900e8a98215c4c3ca12fb3c4e34a2224f06687c055851d85
     name: unbound
@@ -32,4 +32,4 @@ entries:
     urls:
     - https://ryantiger658.github.io/unbound-helm-chart/unbound-chart-0.1.1.tgz
     version: 0.1.1
-generated: "2021-04-09T18:12:53.360510882Z"
+generated: "2021-04-09T19:00:29.77806209Z"
