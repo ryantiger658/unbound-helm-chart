@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - Get-GH-actions-Working
 
 jobs:
   release-chart:
