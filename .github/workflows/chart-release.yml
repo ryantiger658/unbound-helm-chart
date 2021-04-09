@@ -18,3 +18,4 @@ jobs:
           owner: ryantiger658
           repository: charts
           branch: chart-repo
+          linting: off
