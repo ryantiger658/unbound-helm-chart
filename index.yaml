@@ -21,15 +21,4 @@ entries:
     urls:
     - https://ryantiger658.github.io/unbound-helm-chart/unbound-0.1.2.tgz
     version: 0.1.2
-  unbound-chart:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2021-04-09T17:25:49.721804549Z"
-    description: A Helm chart for Kubernetes
-    digest: 2fcc0235ef7a2a370a38f0b1e44abdf3ce22765f76d4be5b714ffd18e72732ff
-    name: unbound-chart
-    type: application
-    urls:
-    - https://ryantiger658.github.io/unbound-helm-chart/unbound-chart-0.1.1.tgz
-    version: 0.1.1
 generated: "2021-04-09T19:00:29.77806209Z"
