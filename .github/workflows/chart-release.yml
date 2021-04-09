@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - Get-GH-actions-Working
 
 jobs:
   release-chart:
@@ -14,8 +15,5 @@ jobs:
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           charts_dir: '.'
-          charts_url: https://ryantiger658.github.io/unbound-helm-chart
-          owner: ryantiger658
-          repository: charts
-          branch: chart-repo
           linting: off
+          branch: chart-repo
