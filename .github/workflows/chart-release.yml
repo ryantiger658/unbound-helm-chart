@@ -16,5 +16,4 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}
           charts_dir: '.'
           linting: off
-
-
+          branch: chart-repo
