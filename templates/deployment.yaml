@@ -35,23 +35,23 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
           - name: "dns-udp"
-            containerPort: {{ .Values.service.port }}
+            containerPort: 5053
             protocol: "UDP"
           - name: "dns-tcp"
-            containerPort: {{ .Values.service.port }}
+            containerPort: 5053
             protocol: "TCP"
           volumeMounts:
           - name: "unbound-conf"
-            mountPath: "/etc/unbound/"
+            mountPath: "/opt/unbound/etc/unbound/"
             readOnly: true
           readinessProbe:
             tcpSocket:
-              port: {{ .Values.service.port }}
+              port: 5053
             initialDelaySeconds: 5
             periodSeconds: 10
           livenessProbe:
             tcpSocket:
-              port: {{ .Values.service.port }}
+              port: 5053
             initialDelaySeconds: 15
             periodSeconds: 20
           resources:
