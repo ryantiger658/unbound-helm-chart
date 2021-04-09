@@ -3,12 +3,12 @@ entries:
   unbound-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-04-09T16:57:58.600978763Z"
+    created: "2021-04-09T16:59:55.359012359Z"
     description: A Helm chart for Kubernetes
-    digest: 1857c19f893091b4d461499009b091420f6c8362480885b161d55e52d8a00992
+    digest: ad2919083bcdc24d866de9589838a724df4c3093b1d88bb97067e332875e3f14
     name: unbound-chart
     type: application
     urls:
     - https://ryantiger658.github.io/unbound-helm-chart/unbound-chart-0.1.1.tgz
     version: 0.1.1
-generated: "2021-04-09T16:57:58.600038029Z"
+generated: "2021-04-09T16:59:55.358108739Z"
