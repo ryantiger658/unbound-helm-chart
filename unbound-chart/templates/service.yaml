@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: unbound-udp
+  name: unbound
   labels:
     {{- include "unbound-chart.labels" . | nindent 4 }}
   annotations:
@@ -20,27 +20,6 @@ spec:
       targetPort: dns-udp
       protocol: UDP
       name: dns-udp
-  selector:
-    {{- include "unbound-chart.selectorLabels" . | nindent 4 }}
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: unbound-tcp
-  labels:
-    {{- include "unbound-chart.labels" . | nindent 4 }}
-  annotations:
-    {{- with .Values.service.annotations }}
-    {{- toYaml . | nindent 8 }}
-    {{- end }}
-spec:
-  {{- $type := default "LoadBalancer" .Values.service.type }}
-  type: {{ $type }}
-  {{- with .Values.service.spec }}
-  {{- toYaml . | nindent 2 }}
-  {{- end }}
-  ports:
     - port: {{ .Values.service.port }}
       targetPort: dns-tcp
       protocol: TCP

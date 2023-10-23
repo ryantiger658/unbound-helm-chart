@@ -1,3 +1,4 @@
+{{- if .Values.test.enabled }}
 apiVersion: v1
 kind: Pod
 metadata:
@@ -9,7 +10,8 @@ metadata:
 spec:
   containers:
     - name: wget
-      image: busybox
+      image: {{ .Values.test.image }}
       command: ['wget']
       args: ['{{ include "unbound-chart.fullname" . }}:{{ .Values.service.port }}']
   restartPolicy: Never
+{{- end }}
